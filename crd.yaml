@@ -1,0 +1,27 @@
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: weatherreports.operators.rajputvaibhav.github.io
+spec:
+  group: operators.rajputvaibhav.github.io
+  versions:
+    - name: v1 
+      served: true 
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            spec:
+              type: object
+              properties:
+                location:
+                  type: string
+                  enum: ["Delhi,in","Tokyo,jp","London,uk","California,us"]
+  scope: Namespaced
+  names:
+    plural: weatherreports
+    singular: weatherreport
+    kind: WeatherReport
+    shortNames:
+    - wr

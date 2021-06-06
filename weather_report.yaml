@@ -1,0 +1,6 @@
+apiVersion: operators.rajputvaibhav.github.io/v1
+kind: WeatherReport
+metadata:
+  name: weather-report-delhi
+spec:
+  location: Delhi,in
